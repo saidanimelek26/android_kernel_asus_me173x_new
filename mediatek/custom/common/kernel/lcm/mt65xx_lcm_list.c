@@ -1,5 +1,6 @@
 #include <lcm_drv.h>
 //superdragonpt added
+extern LCM_DRIVER auo_b079xat02_dsi_vdo_lcm_drv;
 extern LCM_DRIVER lgld070wx3_dsi_vdo_lcm_drv;
 extern LCM_DRIVER nt35521_dsi_vdo_lcm_drv;
 //superdragonpt
@@ -7,6 +8,11 @@ extern LCM_DRIVER nt35521_dsi_vdo_lcm_drv;
 LCM_DRIVER* lcm_driver_list[] = 
 { 
 //superdragonpt added
+
+#if defined(AUO_B079XAT02_DSI_VDO)
+    &auo_b079xat02_dsi_vdo_lcm_drv,
+#endif
+
 #if defined(LGLD070WX3_DSI_VDO)
     &lgld070wx3_dsi_vdo_lcm_drv,
 #endif
